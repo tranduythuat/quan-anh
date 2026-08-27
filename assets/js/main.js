@@ -1,6 +1,8 @@
 // Kích hoạt ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
+const qs = (selector, parent = document) => parent.querySelector(selector);
+
 // Gọi các hiệu ứng có sẵn
 document.addEventListener("DOMContentLoaded", () => {
   gsapFlipIn(".animate-flip");
@@ -85,7 +87,52 @@ document.addEventListener("DOMContentLoaded", () => {
   if (form) {
     form.addEventListener("submit", (e) => handleFormSubmit(e));
   }
+
+  initMusic();
 });
+
+/* ======================================================
+       MUSIC
+    ====================================================== */
+
+function initMusic() {
+  const audio = qs("#audio");
+  const icon = qs("#iconSvg");
+  const btn = qs("#player-btn");
+  const label = qs("#musicLabel");
+
+  let isOpen = true
+
+  if (!audio || !icon || !btn || !label) return;
+  audio.volume = 0.5
+
+  // 👉 GSAP timeline cho label
+  const tl = gsap.timeline({ paused: true });
+
+  tl.to(label, {
+    x: 200,
+    // opacity: 0,
+    duration: 1,
+    ease: "power2.inOut",
+    pointerEvents: "none"
+  });
+
+  btn.addEventListener("click", () => {
+    if (!audio.src) return;
+    audio.paused ? audio.play() : audio.pause();
+
+    // toggle label
+    if (isOpen) {
+      tl.play();
+    } else {
+      tl.reverse();
+    }
+    isOpen = !isOpen;
+  });
+
+  audio.addEventListener("play", () => icon.classList.add("spin"));
+  audio.addEventListener("pause", () => icon.classList.remove("spin"));
+}
 
 async function handleFormSubmit(e) {
   e.preventDefault();
