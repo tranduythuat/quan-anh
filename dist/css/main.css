@@ -255,6 +255,7 @@ header {
   width: 100%;
   aspect-ratio: 500/891;
   perspective: 1000px;
+  background-color: #5a3a21;
 }
 .cover img {
   width: 100%;
