@@ -1,0 +1,189 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.location {
+    justify-content: start;
+    max-width: 500px;
+    width: 100%;
+    aspect-ratio: 500 / 889;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("../../assets/images/map_bg.jpg");
+        background-size: cover;
+        background-position: center;
+        filter: blur(8px) contrast(110%);
+        transform: scale(1.1);
+        /* tránh viền trắng khi blur */
+        z-index: 0;
+    }
+
+    .frame {
+        max-width: 363px;
+        width: 100%;
+        aspect-ratio: 363 / 430;
+        background: url('../../assets/images/location_frame.png') no-repeat center / cover;
+        z-index: 1;
+        margin-top: 14%;
+        margin-bottom: 6%;
+
+        .location-name {
+            margin-top: 12%;
+            font-size: 33px;
+            font-weight: 300;
+            color: $secondary-color;
+        }
+
+        .address {
+            font-size: 11px;
+            margin-bottom: 6%;
+        }
+
+        .map {
+            margin-bottom: 5%;
+            min-height: 218px;
+
+            img {
+                max-width: 345px;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .btn-map {
+            text-decoration: none;
+            color: #eeede8ff;
+            background-color: $secondary-color;
+            padding: 1% 8%;
+            border-radius: 5px;
+            margin-bottom: 8%;
+        }
+    }
+
+
+    .timeline {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        .logo {
+            max-width: 37px;
+            width: 100%;
+            aspect-ratio: 37 / 58;
+            margin: 4% 0 5%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .title {
+            font-size: 16.38px;
+            color: #eeede8ff;
+            margin-bottom: 5%;
+        }
+
+        .time-box {
+            width: 40%;
+
+            .timeline-item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 10%;
+
+                .icon {
+                    width: 15%;
+                    height: 20%;
+                    margin-right: 6%;
+                    @include flex-center;
+
+                    img {
+                        max-width: 15px;
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+
+                .description {
+                    width: 60%;
+                    font-size: 13.77px;
+                    color: #eeede8ff;
+                    text-align: left;
+                }
+            }
+
+            .timeline-item:nth-child(2) {
+                .icon {
+                    img {
+                        max-width: 20px;
+                    }
+                }
+            }
+
+            .timeline-item:nth-child(3) {
+                .icon {
+                    img {
+                        width: 55%;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        .frame {
+            max-width: calc((363px / 500px) * 100vw);
+
+            .location-name {
+                font-size: calc((33px / 500px) * 100vw);
+            }
+
+            .address {
+                font-size: calc((11px / 500px) * 100vw);
+            }
+
+            .map {
+                min-height: calc((218px / 500px) * 100vw);
+
+                img {
+                    max-width: calc((345 / 500) * 100vw);
+                }
+            }
+
+            .btn-map {
+                font-size: 2.2vw;
+            }
+        }
+
+        .timeline {
+            .logo {
+                max-width: 7.6vw;
+            }
+
+            .title {
+                font-size: 3.3vw;
+            }
+
+            .time-box {
+                .timeline-item {
+                    .icon {
+                        max-width: 4vw;
+                    }
+
+                    .description {
+                        font-size: 2.7vw;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,112 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.greeting {
+    // background: url('../../assets/images/greeting.webp') no-repeat center/cover;
+    max-width: 500px;
+    width: 100%;
+    aspect-ratio: 500 / 890;
+
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("../../assets/images/IMG_2137.jpg");
+        background-size: cover;
+        background-position: center;
+        filter: blur(7px);
+        transform: scale(1.1);
+        /* tránh viền trắng khi blur */
+        z-index: 0;
+    }
+
+    .content {
+        width: 100%;
+        max-width: 364px;
+        aspect-ratio: 364 / 650;
+        background: url('https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/huy-doan/our_story_bg.png') no-repeat center/cover;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        h2 {
+            font-size: 18px;
+            font-weight: 300;
+            color: $secondary-color;
+            padding-bottom: 6%;
+        }
+
+        p {
+            text-align: justify;
+            text-align-last: center;
+            padding-bottom: 6%;
+            line-height: 180%;
+            margin: 0 17%;
+        }
+
+        .signature {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            // margin-left: -8%;
+
+            .img-box {
+                @include flex-center;
+
+                img.logo-couple {
+                    width: 27px;
+                    height: auto;
+                }
+            }
+
+
+            .wife-name,
+            .husband-name {
+                width: 32%;
+                @include flex-center;
+            }
+
+            p {
+                display: block;
+                font-size: 15px;
+                font-family: '1FTV-VIP-Bengoda', sans-serif;
+                font-weight: 300;
+                color: $secondary-color;
+                padding: 0;
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        .content {
+            max-width: calc((364 / 500) * 100vw);
+
+            h2 {
+                font-size: calc((18px / 500px) * 100vw);
+            }
+
+            p {
+                // font-size: 1.85vw;
+                font-size: calc(($base-font-size / 500px) * 100vw);
+            }
+
+            .signature {
+                .img-box {
+                    img.logo-couple {
+                        width: calc((27 / 500) * 100vw);
+                    }
+                }
+
+                p {
+                    font-size: calc((15 / 500) * 100vw);
+                }
+            }
+        }
+    }
+}
