@@ -13,7 +13,7 @@
         content: "";
         position: absolute;
         inset: 0;
-        background-image: url("../../assets/images/map_bg.jpg");
+        background-image: url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/quan-anh/map_bg.jpg");
         background-size: cover;
         background-position: center;
         filter: blur(8px) contrast(110%);
@@ -48,7 +48,7 @@
             min-height: 218px;
 
             img {
-                max-width: 345px;
+                max-width: 286px;
                 width: 100%;
                 height: auto;
             }
@@ -155,7 +155,7 @@
                 min-height: calc((218px / 500px) * 100vw);
 
                 img {
-                    max-width: calc((345 / 500) * 100vw);
+                    max-width: calc((286 / 500) * 100vw);
                 }
             }
 
