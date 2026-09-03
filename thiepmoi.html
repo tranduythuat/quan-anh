@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quân & Anh</title>
+  <title>Quân & Bảo Anh</title>
 
   <!-- Các thông tin khác cho Open Graph -->
   <meta property="og:title" content="Hoàng Quân & Bảo Anh" />
@@ -21,6 +21,15 @@
 </head>
 
 <body>
+  <div class="letter-section">
+    <div class="content" id="open-card">
+      <!-- <div class="subtext">
+        Dành cho bạn, vị khách <br />
+        đặc biệt của chúng tôi
+      </div> -->
+      <!-- <a href="#" class="open-card" id="open-card">Mở thiệp</a> -->
+    </div>
+  </div>
   <div class="container">
     <nav class="navbar">
       <div class="navbar-container">
@@ -42,20 +51,20 @@
       </div>
     </nav>
     <!-- SECTION 1: COVER / ENVELOPE -->
-    <section id="cover" class="cover">
-      <img src="https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/quan-anh/letter.jpg" alt="cover" class="fade-up">
-    </section>
+    <!-- <section id="cover" class="cover">
+      <img src="https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/quan-anh/letter.jpg" alt="cover" data-animate="fade-up">
+    </section> -->
 
     <!-- SECTION 2: OPEN LETTER / GREETING -->
     <section id="greeting" class="greeting">
-      <div class="content">
-        <h2 class="fade-down">Gửi những người </br> Thân Thương</h2>
-        <p class="fade-right">
+      <div class="content" data-animate="fade-in">
+        <h2 data-animate="fade-down">Gửi những người </br> Thân Thương</h2>
+        <p data-animate="fade-right">
           Chúng mình chọn năm 2026 để bắt đầu một chương mới. Sau 5 năm trưởng thành cùng nhau, tụi mình muốn gửi đến
           những người
           thân thương nhất lời mời trân quý cho ngày hai đứa chính thức bước sang hành trình mới này.
         </p>
-        <div class="signature fade-up">
+        <div class="signature" data-animate="fade-up">
           <div class="wife-name">
             <p>Hoàng Quân</p>
           </div>
@@ -71,35 +80,35 @@
 
     <!-- SECTION 3: COUPLE INTRO -->
     <section id="couple" class="couple">
-      <h2 class="fade-up">Hẹn ngày mình gặp gỡ</h2>
-      <div class="couple-photo">
+      <h2 data-animate="fade-up">Hẹn ngày mình gặp gỡ</h2>
+      <div class="couple-photo" data-animate="flip-vertical-left">
         <div class="frame"></div>
-        <img src="assets/images/rect1652.png" class="tape" alt="">
+        <!-- <img src="assets/images/rect1652.png" class="tape" alt=""> -->
       </div>
       <div class="save-the-date">
-        <p class="fade-right">save the date</p>
+        <p data-animate="fade-right">save the date</p>
       </div>
-      <div class="subtext fade-down">
+      <div class="subtext" data-animate="fade-down">
         <p>Sự hiện diện của bạn là điều làm nên ý nghĩa của ngày hôm ấy</p>
       </div>
       <div class="date-time">
-        <p class="date fade-right">20.09.2026</p>
-        <p class="time fade-right">17:30 - Chủ Nhật</p>
+        <p class="date" data-animate="fade-right">20.09.2026</p>
+        <p class="time" data-animate="fade-right">17:30 - Chủ Nhật</p>
       </div>
       <div class="countdown">
-        <div class="months item">
+        <div class="months item" data-animate="fade-up">
           <p class="value months" id="months-1">00</p>
           <p class="title">Tháng</p>
         </div>
-        <div class="weeks item">
+        <div class="weeks item" data-animate="fade-up">
           <p class="value weeks" id="weeks-1">00</p>
           <p class="title">Tuần</p>
         </div>
-        <div class="days item">
+        <div class="days item" data-animate="fade-up">
           <p class="value days" id="days-1">00</p>
           <p class="title">Ngày</p>
         </div>
-        <div class="seconds item">
+        <div class="seconds item" data-animate="fade-up">
           <p class="value seconds" id="seconds-1">00</p>
           <p class="title">Giây</p>
         </div>
@@ -110,43 +119,44 @@
     <!-- SECTION 4: LOCATION -->
     <section id="location" class="location">
       <div class="frame">
-        <h2 class="location-name fade-up">Pullman Hanoi Hotel</h2>
-        <p class="address fade-right">61 Giảng Võ, Phường Ô Chợ Dừa, Hà Nội</p>
+        <h2 class="location-name" data-animate="fade-up">Pullman Hanoi Hotel</h2>
+        <p class="address" data-animate="fade-right">61 Giảng Võ, Phường Ô Chợ Dừa, Hà Nội</p>
         <div class="map">
-          <img src="assets/images/map.png" alt="Bản đồ địa điểm cưới" class="flip-vertical-left" />
+          <img src="assets/images/map.png" alt="Bản đồ địa điểm cưới" data-animate="flip-vertical-left" />
         </div>
-        <a target="_blank" href="https://maps.app.goo.gl/ktDpoAUiSxB4XWUK8" class="btn-map fade-down">Xem bản đồ</a>
+        <a target="_blank" href="https://maps.app.goo.gl/ktDpoAUiSxB4XWUK8" class="btn-map" data-animate="fade-down">Xem
+          bản đồ</a>
       </div>
 
       <div class="timeline">
         <div class="logo">
-          <img src="assets/images/logo-timeline.png" alt="Logo couple timeline" class="flip-vertical-left">
+          <img src="assets/images/logo-timeline.png" alt="Logo couple timeline" data-animate="flip-vertical-left">
         </div>
-        <p class="title fade-down">Timeline</p>
-        <div class="time-box">
+        <p class="title" data-animate="fade-down">Timeline</p>
+        <div class="time-box ">
           <div class="timeline-item first">
             <div class="icon">
-              <img src="assets/images/icons/camera.webp" alt="">
+              <img src="assets/images/icons/camera.webp" alt="" class="icon-animate">
             </div>
-            <p class="description">17:30 | Đón Khách</p>
+            <p class="description time">17:30 | Đón Khách</p>
           </div>
           <div class="timeline-item second">
             <div class="icon">
-              <img src="assets/images/icons/rings.webp" alt="">
+              <img src="assets/images/icons/rings.webp" alt="" class="icon-animate">
             </div>
-            <p class="description">18:15 | Hôn Lễ</p>
+            <p class="description time">18:15 | Hôn Lễ</p>
           </div>
           <div class="timeline-item third">
             <div class="icon">
-              <img src="assets/images/icons/cup.webp" alt="">
+              <img src="assets/images/icons/cup.webp" alt="" class="icon-animate">
             </div>
-            <p class="description">19:00 | Khai tiệc</p>
+            <p class="description time">19:00 | Khai tiệc</p>
           </div>
           <div class="timeline-item four">
             <div class="icon">
-              <img src="assets/images/icons/party.webp" alt="">
+              <img src="assets/images/icons/party.webp" alt="" class="icon-animate">
             </div>
-            <p class="description">19:30 - Giao Lưu</p>
+            <p class="description time">19:30 - Giao Lưu</p>
           </div>
           <!--<div class="timeline-item five">
             <div class="icon">
@@ -161,18 +171,18 @@
     <!-- SECTION 5: STORY / ABOUT -->
     <section id="our-story" class="our-story">
       <div class="logo">
-        <img src="assets/images/logo.png" alt="" class="flip-vertical-left">
+        <img src="assets/images/logo.png" alt="" data-animate="flip-vertical-left">
       </div>
-      <h2 class="fade-up">Chuyện chúng mình</h2>
-      <h3 class="fade-right">Quân & Anh</h3>
-      <p class="subtext fade-down">ngày chúng mình </br> kể chuyện</p>
+      <h2 data-animate="fade-up">Chuyện chúng mình</h2>
+      <h3 data-animate="fade-right">Quân & Bảo Anh</h3>
+      <p class="subtext" data-animate="fade-down">ngày chúng mình </br> kể chuyện</p>
       <div class="photo">
         <img src="https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/quan-anh/couple/couple.jpg" alt=""
-          class="animate-flip" style="object-fit: cover; object-position: 100% 60%;">
+          data-animate="flip" style="object-fit: cover; object-position: 100% 60%;">
       </div>
       <div class="text">
 
-        <p class="fade-right">
+        <p data-animate="fade-right">
           Từ những ngày đầu gặp gỡ cho đến hiện tại, chúng mình đã học được cách lắng nghe , cảm thông - thấu hiểu và
           cùng trưởng
           thành. Mỗi giai đoạn đều mang một tên gọi, một cột mốc và một câu chuyện riêng- nhưng điều không đổi là tụi
@@ -184,20 +194,21 @@
 
     <!-- SECTION 5: PHOTOS -->
     <section id="photos" class="photos">
-      <h2 class="fade-up">Vì chúng mình </br> gìn giữ</h2>
-      <p class="fade-right">Tụi mình muốn lưu giữ những kỷ niệm ấy, những khoảnh khắc dung dị nhưng đầy ý nghĩa như cách
+      <h2 data-animate="fade-up">Vì chúng mình </br> gìn giữ</h2>
+      <p data-animate="fade-right">Tụi mình muốn lưu giữ những kỷ niệm ấy, những khoảnh khắc dung dị nhưng đầy ý nghĩa
+        như cách
         mà chúng mình vẫn gìn giữ
         nhau suốt chặng đường dài.
       </p>
       <div class="photo-grid">
         <div class="row">
           <div class="column">
-            <div class="img-box fade-down">
+            <div class="img-box" data-animate="fade-down">
               <img loading="lazy" src="https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/quan-anh/album/1.jpg" alt=""
                 style="object-position: 100% 35%;">
             </div>
           </div>
-          <div class="column flip-vertical-left">
+          <div class="column" data-animate="flip-vertical-left">
             <div class="img-box">
               <img loading="lazy" src="https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/quan-anh/album/2.jpg" alt="">
             </div>
@@ -205,39 +216,39 @@
         </div>
         <div class="row">
           <div class="column">
-            <div class="img-box fade-down">
+            <div class="img-box" data-animate="fade-down">
               <img loading="lazy" src="https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/quan-anh/album/3.jpg"
                 style="object-position: 100% 90%;" alt="">
             </div>
           </div>
           <div class="column">
-            <div class="img-box flip-vertical-left">
+            <div class="img-box" data-animate="flip-vertical-left">
               <img loading="lazy" src="https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/quan-anh/album/4.jpg" alt="">
             </div>
           </div>
         </div>
         <div class="row">
           <div class="column">
-            <div class="img-box fade-down">
+            <div class="img-box" data-animate="fade-down">
               <img loading="lazy" src="https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/quan-anh/album/5.jpg"
                 style="object-position: 100% 92%;" alt="">
             </div>
           </div>
           <div class="column">
-            <div class="img-box flip-vertical-left">
+            <div class="img-box" data-animate="flip-vertical-left">
               <img loading="lazy" src="https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/quan-anh/album/6.jpg" alt="">
             </div>
           </div>
         </div>
         <div class="row">
           <div class="column">
-            <div class="img-box fade-down">
+            <div class="img-box" data-animate="fade-down">
               <img loading="lazy" src="https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/quan-anh/album/IMG_2131.webp"
                 style="object-position: 100% 73%;" alt="">
             </div>
           </div>
           <div class="column">
-            <div class="img-box flip-vertical-left">
+            <div class="img-box" data-animate="flip-vertical-left">
               <img loading="lazy" src="https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/quan-anh/album/8.jpg" alt="">
             </div>
           </div>
@@ -248,39 +259,41 @@
     <!-- SECTION 6: RSVP -->
     <section id="rsvp" class="rsvp">
       <div class="content">
-        <h2 class="title fade-up">Xác nhận khách mời</h2>
-        <p class="subtext fade-right">Chúng mình rất mong được đón tiếp mọi người chỉn chu nhất trong ngày đặc biệt ấy.
+        <h2 class="title" data-animate="fade-up">Xác nhận khách mời</h2>
+        <p class="subtext" data-animate="fade-right">Chúng mình rất mong được đón tiếp mọi người chỉn chu nhất trong
+          ngày đặc biệt ấy.
           Nếu bạn có thể sắp xếp tham dự, hãy
           cho chúng mình biết <strong>trước ngày 09/09</strong> để mọi thứ được chuẩn bị thật chu đáo nhé!</p>
 
         <form id="rsvp-form">
-          <div class="form-group options-group fade-up">
+          <div class="form-group options-group" data-animate="fade-up">
             <input type="radio" class="confirm" id="confirm-yes" value="Sẽ tham dự" name="confirm" checked>
             <label for="confirm-yes" class="radio-button confirm-yes">SẼ THAM DỰ</label>
             <input type="radio" class="confirm" id="confirm-no" value="Không thể tham dự" name="confirm">
             <label for="confirm-no" class="radio-button confirm-no">TIẾC QUÁ! MÌNH </br> KHÔNG THỂ THAM DỰ</label>
           </div>
 
-          <div class="form-group fade-up">
+          <div class="form-group" data-animate="fade-up">
             <input type="text" class="name input-text" id="name" name="name" placeholder="Tên Khách Mời" required>
           </div>
 
-          <div class="form-group fade-up">
+          <div class="form-group" data-animate="fade-up">
             <input type="text" class="guest-number input-text" id="guest-number" name="guest_number"
               placeholder="Số Người Đi Kèm (Không bao gồm bản thân bạn)">
           </div>
 
           <div class="wish-box">
-            <h2 class="fade-down">Một chút nhắn gửi từ </br> “người thương”</h2>
-            <p class="fade-up">Khoa và Châu luôn lắng nghe những mong muốn từ cả nhà. Nếu có thắc mắc, hay cần hỗ trợ
+            <h2 data-animate="fade-down">Một chút nhắn gửi từ </br> “người thương”</h2>
+            <p data-animate="fade-up">Khoa và Châu luôn lắng nghe những mong muốn từ cả nhà. Nếu có thắc mắc, hay cần hỗ
+              trợ
               bất cứ điều gì, đừng ngại cả nhà cứ ghi rõ để chúng em/cháu sắp xếp chu đáo nhé!</p>
 
-            <div class="form-group fade-right">
+            <div class="form-group" data-animate="fade-right">
               <textarea class="wish input-text" id="wish" name="wish" placeholder="Viết lời nhắn gửi:"></textarea>
             </div>
           </div>
           <div class="form-actions">
-            <button type="submit" class="btn fade-up">XÁC NHẬN</button>
+            <button type="submit" class="btn" data-animate="fade-up">XÁC NHẬN</button>
           </div>
         </form>
       </div>
@@ -299,17 +312,17 @@
 
     <!-- SECTION 7: THANK YOU -->
     <section id="thankyou" class="thankyou">
-      <h2 class="title fade-up">Lời cảm ơn </br> đặc biệt</h2>
+      <h2 class="title" data-animate="fade-up">Lời cảm ơn </br> đặc biệt</h2>
       <div class="photo">
-        <img src="https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/quan-anh/end_photo.jpg" alt=""
-          class="animate-flip" style="object-fit: cover; object-position: 100% 29%;">
+        <img src="https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/quan-anh/end_photo.jpg" alt="" data-animate="flip"
+          style="object-fit: cover; object-position: 100% 29%;">
       </div>
       <div class="subtext">
         <div class="divider">
-          <img src="assets/images/icons/divider.webp" alt="" class="fade-right">
+          <img src="assets/images/icons/divider.webp" alt="" data-animate="fade-right">
         </div>
         <div class="text">
-          <p class="fade-right">
+          <p data-animate="fade-right">
             Chúng mình biết rằng chằng có hành trình nào thật sự trọn vẹn nếu đi một mình. Cảm ơn gia đình hai bên đã
             luôn yêu
             thương, vun đắp và đồng hành với chúng con. Cảm ơn bạn bè đã cùng lắng nghe và chia sẻ từng niềm vui nhỏ. Và
@@ -321,7 +334,7 @@
           <!-- <img src="assets/images/end-text.png" alt=""> -->
         </div>
         <div class="divider">
-          <img src="assets/images/icons/divider.webp" alt="" class="fade-left">
+          <img src="assets/images/icons/divider.webp" alt="" data-animate="fade-left">
         </div>
       </div>
     </section>
