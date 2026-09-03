@@ -572,28 +572,28 @@
       related,
     } = data;
 
-    if (confirm === "Yes") {
-      const selectedLocations = document.querySelectorAll('input[name="location"]:checked');
-      if (selectedLocations.length === 0) {
-        let errorMsg = document.getElementById("location-error");
-        if (!errorMsg) {
-          errorMsg = document.createElement("p");
-          errorMsg.id = "location-error";
-          errorMsg.style.cssText = "color: red; font-size: 13px; margin-top: 8px; text-align: center;";
-          document.getElementById("location-group").appendChild(errorMsg);
-        }
-        errorMsg.textContent = "Quý khách vui lòng chọn ít nhất 1 địa điểm tham dự";
-        setTimeout(() => (errorMsg.textContent = ""), 3000);
-        return;
-      }
-    }
+    // if (confirm === "Yes") {
+    //   const selectedLocations = document.querySelectorAll('input[name="location"]:checked');
+    //   if (selectedLocations.length === 0) {
+    //     let errorMsg = document.getElementById("location-error");
+    //     if (!errorMsg) {
+    //       errorMsg = document.createElement("p");
+    //       errorMsg.id = "location-error";
+    //       errorMsg.style.cssText = "color: red; font-size: 13px; margin-top: 8px; text-align: center;";
+    //       document.getElementById("location-group").appendChild(errorMsg);
+    //     }
+    //     errorMsg.textContent = "Quý khách vui lòng chọn ít nhất 1 địa điểm tham dự";
+    //     setTimeout(() => (errorMsg.textContent = ""), 3000);
+    //     return;
+    //   }
+    // }
 
     // Lấy danh sách địa điểm đã chọn
-    const locations = confirm === "Yes"
-      ? [...document.querySelectorAll('input[name="location"]:checked')]
-        .map((cb) => cb.value)
-        .join(", ")
-      : "";
+    // const locations = confirm === "Yes"
+    //   ? [...document.querySelectorAll('input[name="location"]:checked')]
+    //     .map((cb) => cb.value)
+    //     .join(", ")
+    //   : "";
 
     // =========================
     // i18n Messages
@@ -634,7 +634,7 @@
       didOpen: () => Swal.showLoading(),
     });
 
-    const sheetURL = "https://script.google.com/macros/s/AKfycbxBYsxxG8E1gPZP15Gz9kBdp4B-ER2EFt0gcXmJ1k7W8g9s3ai7nXiQOwCOYl1ZtQYB/exec?sheet=confirm";
+    const sheetURL = "/exec?sheet=confirm";
 
     try {
       const res = await fetch(sheetURL, {
