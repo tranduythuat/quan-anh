@@ -196,6 +196,35 @@
     });
   }
 
+  async function loadGuest() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const inviteCode = urlParams.get("invite");
+    if (!inviteCode)
+      return;
+
+    const response = await fetch(
+      'https://opensheet.elk.sh/1VaBtR3cIjMdvEpyp3X90EMPRbZGGItmk1D2g_VYeg20/T%C3%AAn%20kh%C3%A1ch%20m%E1%BB%9Di'
+    );
+
+    const data = await response.json();
+    console.log('--- DATA ---', data);
+    // Tìm khách mời
+    const guest = data.find(
+      row =>
+        row.slug &&
+        row.slug.trim() === inviteCode
+    );
+
+    // Đổ tên vào giao diện
+    if (guest) {
+      document.querySelector('.guest-name').textContent =
+        guest.name;
+    } else {
+      document.querySelector('.guest-name').textContent =
+        'Quý Khách';
+    }
+  }
+
   function initLetterAnimation() {
     const section = qs(".letter-section");
     if (!section) return;
@@ -766,6 +795,7 @@
     gsap.registerPlugin(ScrollTrigger);
     initPage();
     initMenu();
+    loadGuest();
     // initLetterAnimation();
     initAnimations();
     // initSwiper();

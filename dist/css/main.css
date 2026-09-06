@@ -339,7 +339,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   color: #564e47;
@@ -349,9 +349,35 @@ header {
   perspective: 1000px;
   padding-bottom: 15%;
 }
+.letter-section .content .group-name {
+  width: 100%;
+  top: 85%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #5a3a21;
+}
+.letter-section .content .group-name .invite-text {
+  font-size: 12px;
+  font-family: "Lora", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 1%;
+  text-align: center;
+}
+.letter-section .content .group-name .guest-name {
+  font-family: "Lora", sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
 @media (max-width: 500px) {
   .letter-section .content .subtext {
     font-size: 4.2vw;
+  }
+  .letter-section .content .group-name .invite-text {
+    font-size: 2.4vw;
+  }
+  .letter-section .content .group-name .guest-name {
+    font-size: 4vw;
   }
 }
 

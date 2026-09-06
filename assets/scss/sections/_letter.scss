@@ -13,7 +13,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         display: flex;
-        justify-content: end;
+        justify-content: center;
         align-items: center;
         flex-direction: column;
         color: #564e47ff;
@@ -28,12 +28,45 @@
         //     font-size: 21px;
         //     text-align: center;
         // }
+
+        .group-name {
+            width: 100%;
+            top: 85%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #5a3a21ff;
+
+            .invite-text {
+                font-size: 12px;
+                font-family: $font-main;
+                text-transform: uppercase;
+                margin-bottom: 1%;
+                text-align: center;
+            }
+
+            .guest-name {
+                font-family: $font-main;
+                font-size: 20px;
+                text-align: center;
+            }
+        }
     }
 
     @media (max-width: 500px) {
         .content {
             .subtext {
                 font-size: calc((21 / 500) * 100vw);
+            }
+
+            .group-name {
+                .invite-text {
+                    font-size: calc((12 / 500) * 100vw);
+                }
+
+                .guest-name {
+                    font-size: calc((20 / 500) * 100vw);
+                }
             }
         }
     }
