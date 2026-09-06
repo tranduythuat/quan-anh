@@ -38,7 +38,7 @@
             color: #5a3a21ff;
 
             .invite-text {
-                font-size: 12px;
+                font-size: 16px;
                 font-family: $font-main;
                 text-transform: uppercase;
                 margin-bottom: 1%;
@@ -47,7 +47,7 @@
 
             .guest-name {
                 font-family: $font-main;
-                font-size: 20px;
+                font-size: 28px;
                 text-align: center;
             }
         }
@@ -61,11 +61,11 @@
 
             .group-name {
                 .invite-text {
-                    font-size: calc((12 / 500) * 100vw);
+                    font-size: calc((16 / 500) * 100vw);
                 }
 
                 .guest-name {
-                    font-size: calc((20 / 500) * 100vw);
+                    font-size: calc((28 / 500) * 100vw);
                 }
             }
         }

@@ -358,7 +358,7 @@ header {
   color: #5a3a21;
 }
 .letter-section .content .group-name .invite-text {
-  font-size: 12px;
+  font-size: 16px;
   font-family: "Lora", sans-serif;
   text-transform: uppercase;
   margin-bottom: 1%;
@@ -366,7 +366,7 @@ header {
 }
 .letter-section .content .group-name .guest-name {
   font-family: "Lora", sans-serif;
-  font-size: 20px;
+  font-size: 28px;
   text-align: center;
 }
 @media (max-width: 500px) {
@@ -374,10 +374,10 @@ header {
     font-size: 4.2vw;
   }
   .letter-section .content .group-name .invite-text {
-    font-size: 2.4vw;
+    font-size: 3.2vw;
   }
   .letter-section .content .group-name .guest-name {
-    font-size: 4vw;
+    font-size: 5.6vw;
   }
 }
 
