@@ -598,7 +598,7 @@
       name,
       confirm,
       guest_number,
-      related,
+      wish,
     } = data;
 
     // if (confirm === "Yes") {
@@ -663,7 +663,7 @@
       didOpen: () => Swal.showLoading(),
     });
 
-    const sheetURL = "/exec?sheet=confirm";
+    const sheetURL = "https://script.google.com/macros/s/AKfycbwCYnZaes-cvyuHhIJPGo8Ca2ztghTWsy2KJtkJSw3SXvZ3PLQS0kBTdGwrVBGnzj13/exec?sheet=confirm";
 
     try {
       const res = await fetch(sheetURL, {
@@ -672,9 +672,8 @@
         body: new URLSearchParams({
           name,
           confirm,
-          locations,
           guest_number,
-          related,
+          wish,
         }),
       });
 
